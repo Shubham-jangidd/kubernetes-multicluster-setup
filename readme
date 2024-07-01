@@ -1,0 +1,21 @@
+# 1 edit host vagrant file to setup the no of master and worker node 
+
+# 2 edit the host file then add the new host to the file
+
+# 3 then run vagrant up
+
+# 4 after app the machine are ready run ansible-playbook -i inventory/vagrant.hosts playbooks/ansible-playbook.yaml
+
+# 5 it will configure all the worker and master nodes of kubernetees and join them as well as set up calco netwoeking
+
+# 6 copy the .kube/config file to the admin or host from the master01
+
+# 7 now deploy the dashboard using the commands
+
+# 8 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+
+# 9 apply the dashboard-adminuser.yml from dashboard folder
+
+# 10 kubectl -n kubernetes-dashboard create token admin-user > token.txt
+
+# 11 open the dashboard at https://192.168.56.2:30002/#/login
