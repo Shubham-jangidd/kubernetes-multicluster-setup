@@ -218,6 +218,12 @@
         dest: files/joinmaster.txt
         flat: yes
 
+    - name: Fetch config into local file
+      fetch:
+        src: .kube/config
+        dest: files/config
+        flat: yes
+
     # - name: Copy the join command to server location
     #   copy:
     #     src: /home/shubham/kubeadm/dashboard/dashboard-adminuser.yaml
@@ -257,6 +263,8 @@
     
     - name: Join the node to cluster
       command: sh {{ join_cluster_remote_src }}
+
+      
   
 #second master node start
 - name: second Master Node Setup

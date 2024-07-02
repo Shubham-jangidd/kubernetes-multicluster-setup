@@ -8,7 +8,7 @@
 
 # 5 it will configure all the worker and master nodes of kubernetees and join them as well as set up calco netwoeking
 
-# 6 copy the .kube/config file to the admin or host from the master01
+# 6 copy the file/config file to the admin or host .kube/config file
 
 # 7 now deploy the dashboard using the commands
 
@@ -19,3 +19,5 @@
 # 10 kubectl -n kubernetes-dashboard create token admin-user > token.txt
 
 # 11 open the dashboard at https://192.168.56.2:30002/#/login
+
+# 12 paste the token from token.txt in dasboard to log in dashboard
